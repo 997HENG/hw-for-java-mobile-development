@@ -75,23 +75,20 @@ public class MainActivity extends AppCompatActivity {
                    dialog.setTitle(title).setMessage(message).setPositiveButton("確認", new DialogInterface.OnClickListener() {
                        @Override
                        public void onClick(DialogInterface dialogInterface, int i) {
-                            cnt=0;
-                           message="你共訂購\n";
-                           for(int it:id){
-                               chk = (CheckBox)findViewById(it);
-                               chk.setChecked(false);
-                               }
-
                        }
                    }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
                        @Override
                        public void onClick(DialogInterface dialogInterface, int i) {
-                           for(int it:id){
-                               chk = (CheckBox)findViewById(it);
-                               chk.setChecked(false);
-                           }
                        }
                    }).show();
+
+                   //set all chk to false
+                   cnt=0;
+                   message="你共訂購\n";
+                   for(int it:id){
+                       chk = (CheckBox)findViewById(it);
+                       chk.setChecked(false);
+                   }
                }
 
             }
