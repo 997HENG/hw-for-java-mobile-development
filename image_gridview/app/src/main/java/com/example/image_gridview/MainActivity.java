@@ -18,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spn;
     int [] images ={R.drawable.img1,R.drawable.img2,R.drawable.img3,R.drawable.img4,R.drawable.img5,R.drawable.img6};
     int [] costGrid ={100,170,110,150,130,160};
+    String strGrid;
+    int indexGrid;
+    boolean flag=false;
 
 
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     String [] strSpn={"加購薯條$30","加購咖啡$40","加購可樂$50","加購冰紅茶$20"};
     String [] strSpnItem={"薯條","咖啡","可樂","冰紅茶"};
     int [] costSpn = {30,40,50,20};
+
 
    private TextView order,count;
    private ImageView imageView;
@@ -35,15 +39,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //////init widget////////
-
-        //!for spinner
-        spn = (Spinner) findViewById(R.id.spn);
-        ArrayAdapter<String > adapter= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,strSpn);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spn.setAdapter(adapter);
-
-
 
 
         //!for textview
@@ -60,10 +55,36 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 imageView.setImageResource(images[i]);
                 order.setText("你選擇: "+(i+1)+" 號餐 $"+costGrid[i]+" 元");
-                count.setText("你共購買"+(i+1)+"號餐加"+strSpnItem[spn.getSelectedItemPosition()]+"共"+(costGrid[i]+costSpn[spn.getSelectedItemPosition()])+" 元");
+                strGrid=(i+1)+"號餐加";
+                indexGrid=i;
+                flag = true;
+                count.setText("你共購買" + strGrid + strSpnItem[spn.getSelectedItemPosition()] + "共" + (costGrid[indexGrid] + costSpn[spn.getSelectedItemPosition()]) + " 元");
             }
         });
 
+
+        //!for spinner
+        spn = (Spinner) findViewById(R.id.spn);
+        ArrayAdapter<String > adapter= new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,strSpn);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        spn.setAdapter(adapter);
+        spn.setOnItemSelectedListener(
+                new Spinner.OnItemSelectedListener(){
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+
+                    @Override
+                    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                        count.setText("你共購買" +strSpnItem[i] + "共" + (costSpn[i]) + " 元");
+                        if(flag) {
+                            count.setText("你共購買" + strGrid + strSpnItem[i] + "共" + (costGrid[indexGrid] + costSpn[i]) + " 元");
+                        }
+
+                    }
+                }
+        );
 
     }
 
