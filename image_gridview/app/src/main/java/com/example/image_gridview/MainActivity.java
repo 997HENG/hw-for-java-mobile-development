@@ -44,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         spn.setAdapter(adapter);
 
 
+
+
         //!for textview
          order = (TextView)findViewById(R.id.order);
          count = (TextView)findViewById(R.id.count);
