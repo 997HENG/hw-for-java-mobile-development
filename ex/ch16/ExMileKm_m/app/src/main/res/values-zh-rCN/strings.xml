@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExMilekm_m</string>
+    <string name="str_mile">英哩：</string>
+    <string name="str_trans">转换</string>
+    <string name="str_result1">时速= </string>
+    <string name="str_result2"> 公里</string>
+ </resources>

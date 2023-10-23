@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText android:id="@+id/edtATM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:focusable="false"/>
+    <TableRow android:gravity="center">
+        <Button android:text="1" android:id="@+id/btnN1" />
+        <Button android:text="2" android:id="@+id/btnN2" />
+        <Button android:text="3" android:id="@+id/btnN3" />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button android:text="4" android:id="@+id/btnN4" />
+        <Button android:text="5" android:id="@+id/btnN5" />
+        <Button android:text="6" android:id="@+id/btnN6" />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button android:text="7" android:id="@+id/btnN7" />
+        <Button android:text="8" android:id="@+id/btnN8" />
+        <Button android:text="9" android:id="@+id/btnN9" />
+    </TableRow>
+    <TableRow android:gravity="center">
+        <Button android:text="清除" android:id="@+id/btnBack" />
+        <Button android:text="0" android:id="@+id/btnN0" />
+        <Button android:text="確定" android:id="@+id/btnOK" />
+    </TableRow>
+
+</TableLayout>

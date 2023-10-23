@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1092055628850",
+    "firebase_url": "https://mlkitface-94887.firebaseio.com",
+    "project_id": "mlkitface-94887",
+    "storage_bucket": "mlkitface-94887.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1092055628850:android:1cb582aef01d23faff102b",
+        "android_client_info": {
+          "package_name": "com.ehappy.mlkitface"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1092055628850-aoku74dr2mnfq6riuj0b4h6shds851r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUamUoZDh2a6lDdodNYJ7ZPdXKOwbziBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1092055628850-aoku74dr2mnfq6riuj0b4h6shds851r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

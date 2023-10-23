@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ExMileKm_m</string>
+    <string name="str_mile">英哩：</string>
+    <string name="str_trans">轉換</string>
+    <string name="str_result1">時速= </string>
+    <string name="str_result2"> 公里</string>
+</resources>
