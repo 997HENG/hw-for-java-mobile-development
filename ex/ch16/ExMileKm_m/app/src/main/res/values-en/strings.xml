@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">ExMilekm_m</string>
-    <string name="str_mile">Miles：</string>
-    <string name="str_trans">Transfer</string>
-    <string name="str_result1">Speed= </string>
-    <string name="str_result2"> Kilometer</string>
-</resources>
