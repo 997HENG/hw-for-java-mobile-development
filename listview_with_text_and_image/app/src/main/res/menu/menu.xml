@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/m1"
+        android:title="about trivago" />
+    <item
+        android:id="@+id/m2"
+        android:title="how to get there" />
+    <item
+        android:id="@+id/m3"
+        android:title="reservation" />
+    <item
+        android:id="@+id/m4"
+        android:title="quit" />
+</menu>
